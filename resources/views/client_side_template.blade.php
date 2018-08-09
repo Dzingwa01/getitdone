@@ -20,18 +20,19 @@
             <li><a href="{{url('register')}}">Register</a></li>
 
         </ul>
+
         <ul class="right hide-on-med-and-down">
-            <li><a href="{{url('/')}}">Home</a></li>
-            <li><a href="#about_us">About Us</a></li>
-            <li><a href="#contact_us">Contact Us</a></li>
-            <li><a class="dropdown-trigger" href="#dropdown1" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="sidenav-close" href="{{url('/')}}">Home</a></li>
+            <li><a class="sidenav-close" href="#about_us">About Us</a></li>
+            <li><a class="sidenav-close" href="#contact_us">Contact Us</a></li>
+            <li><a  class="dropdown-trigger_cus" href="#dropdown1" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
             <li><a href="{{url('/')}}">Home</a></li>
             <li><a href="#about_us">About Us</a></li>
             <li><a href="#contact_us">Contact Us</a></li>
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger_cus" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -77,13 +78,19 @@
     </div>
 </footer>
 
+
+<style>
+    .sidenav-overlay {
+        z-index: 996;
+    }
+</style>
 <!--  Scripts-->
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
+
 <script>
     $(document).ready(function(){
         console.log("initializing");
@@ -94,9 +101,11 @@
                 "Google": 'https://placehold.it/250x250'
             },
         });
-        $(".dropdown-trigger").dropdown();
+        $(".dropdown-trigger_cus").dropdown();
+        $(".dropdown-trigger_cus2").dropdown();
     });
 
 </script>
+<script src="js/init.js"></script>
 </body>
 </html>
